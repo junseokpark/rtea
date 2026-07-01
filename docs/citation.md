@@ -2,7 +2,7 @@
 
 If you use ``rTea`` in your research, please cite:
 
-> Junseok Park et al.
+> Boram Lee and Junseok Park et al.
 > *Pan-cancer analysis reveals multifaceted roles of retrotransposon-fusion RNAs*
 > bioRxiv 2023.10.16.562422
 > https://www.biorxiv.org/content/10.1101/2023.10.16.562422v1.abstract
