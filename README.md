@@ -17,7 +17,67 @@
 We developed ``rTea`` to detect TE-fusion transcripts from short-read RNA-seq data. We utilized multiple features from aligned reads, such as base quality of clipped sequences, percentage of multi-mapped reads, and matching score of reads to TE sequences to filter out false positives caused by nonspecifically mapped reads.
 
 # Demo and result files
-Users can try ``rTea`` on a demo data set and can check the output at  [https://gitlab.aleelab.net/junseokpark/rTea-results](https://gitlab.aleelab.net/junseokpark/``rTea``-results)
+
+A hands-on demo is available in the [`rtea_results/demo/`](rtea_results/demo/) directory of this repository.
+It lets you run ``rTea`` on a small test sample and verify the output against the provided expected results.
+
+The demo materials are adapted from the external
+[rTea-results](https://gitlab.aleelab.net/junseokpark/rTea-results) repository,
+which hosts the full pan-cancer analysis results.
+Large input data files (raw FASTQ/BAM) are **not** included in this repository due to their size.
+
+## Large downloads and demo artifacts
+
+Small scripts and expected outputs are version-controlled in this repository.
+Large artifacts — raw FASTQ/BAM demo data, full result bundles, and optional Singularity images — are hosted on
+**Google Cloud Storage (GCS) with Requester Pays** enabled.
+
+See **[docs/gcs_requester_pays.md](docs/gcs_requester_pays.md)** for complete instructions on:
+- What Requester Pays means and who pays for what
+- Requirements for downloaders (`gcloud` CLI, a billing-enabled GCP project)
+- Download commands for all artifact types
+- Troubleshooting `400 UserProjectMissing` errors
+
+See **[rtea_results/demo/README.md](rtea_results/demo/README.md)** for the full step-by-step demo workflow.
+
+### Quick-start demo
+
+1. **Download the demo input data** using GCS with your billing project:
+   ```bash
+   export RTEA_BILLING_PROJECT="your-google-cloud-project-id"
+   export RTEA_DEMO_BUCKET="gs://<RTEA_DEMO_BUCKET>"   # replace with actual bucket name
+
+   bash scripts/download_demo_data.sh \
+       --billing-project "$RTEA_BILLING_PROJECT" \
+       --bucket "$RTEA_DEMO_BUCKET/demo"
+   ```
+
+2. **Set up the environment** – install all dependencies or use Docker/Singularity
+   (see [Installation](#installation) below).
+   ```bash
+   export GENOME_SNP_TRAN_DIR=/path/to/grch38_snp_tran
+   ```
+
+3. **Run the demo pipeline:**
+   ```bash
+   bash rtea_results/demo/run_demo.sh \
+       rtea_results/demo/data/demo.R1.fastq.gz \
+       rtea_results/demo/data/demo.R2.fastq.gz \
+       demo_sample \
+       "$GENOME_SNP_TRAN_DIR" \
+       4 \
+       rtea_results/demo/output \
+       hg38
+   ```
+
+4. **Verify the results** – compare your output with the expected output bundled in the repository:
+   ```bash
+   diff rtea_results/demo/output/rtea/demo_sample.rtea.txt \
+        rtea_results/demo/expected_output/demo.rtea.txt
+   ```
+   A successful run produces no differences (or only minor floating-point variations).
+
+For full details see [`rtea_results/demo/README.md`](rtea_results/demo/README.md).
 
 # Installation
 ``rTea`` runs on a Linux-based operating system with certain prerequisite software. Here is a list of the software you should install before you start using ``rTea``.

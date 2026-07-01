@@ -14,3 +14,17 @@ node_modules/
 /analysis/resultData/
 /analysis/sourceFiles/
 /analysis/figures/
+
+# rTea local config (may contain billing project IDs)
+config/gcs_artifacts.yaml
+
+# Downloaded large demo input files
+rtea_results/demo/data/
+rtea_results/demo/output/
+
+# Downloaded Singularity images
+images/*.sif
+
+# Sphinx build output and docs virtual environment
+docs/_build/
+.venv-docs/

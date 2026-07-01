@@ -1,0 +1,21 @@
+# rTea GCS artifact configuration
+# Copy this file to config/gcs_artifacts.yaml and replace all <PLACEHOLDER> values.
+# IMPORTANT: Never commit config/gcs_artifacts.yaml — it is listed in .gitignore.
+
+# Your Google Cloud project ID (used for Requester Pays billing).
+# The project must have billing enabled and be in good standing.
+billing_project: "your-google-cloud-project-id"
+
+artifacts:
+  # Demo FASTQ files prefix (used by scripts/download_demo_data.sh)
+  demo_fastq_prefix: "gs://<RTEA_DEMO_BUCKET>/demo/fastq"
+
+  # Demo BAM file (optional; used for BAM-mode demo)
+  demo_bam: "gs://<RTEA_DEMO_BUCKET>/demo/bam/demo.bam"
+
+  # Singularity image bucket (used by scripts/download_singularity_image.sh)
+  singularity_image_prefix: "gs://<RTEA_IMAGE_BUCKET>/singularity"
+
+  # Full result release bundle prefix (used by scripts/download_rtea_results.sh)
+  # Replace <VERSION> with the release tag, e.g. v1.0.0
+  result_release_prefix: "gs://<RTEA_RESULTS_BUCKET>/release/<VERSION>"
