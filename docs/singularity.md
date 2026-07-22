@@ -8,7 +8,7 @@ Singularity images are hosted on GCS with Requester Pays. See [GCS Requester Pay
 
 ```bash
 export RTEA_BILLING_PROJECT="your-google-cloud-project-id"
-export RTEA_IMAGE_BUCKET="gs://<RTEA_IMAGE_BUCKET>"
+export RTEA_IMAGE_BUCKET="gs://rtea-public-data/rtea-results/demo/singularity"
 
 bash scripts/download_singularity_image.sh \
     --billing-project "$RTEA_BILLING_PROJECT" \
