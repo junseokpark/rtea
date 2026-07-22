@@ -16,7 +16,7 @@ See [GCS Requester Pays](gcs_requester_pays.md) for download instructions.
 ```bash
 bash scripts/download_rtea_results.sh \
     --billing-project "$RTEA_BILLING_PROJECT" \
-    --bucket "gs://<RTEA_RESULTS_BUCKET>" \
+    --bucket "gs://rtea-public-data/rtea-results/filteredResults" \
     --version v1.0.0
 ```
 
