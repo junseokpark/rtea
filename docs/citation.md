@@ -17,7 +17,7 @@ https://gitlab.aleelab.net/junseokpark/rTea-results
 
 ## Contact
 
-- Junseok Park — junseok.park@childrens.harvard.edu
+- Junseok Park — junseok.park@bcm.edu
 - Boram Lee — boram.lee@samsung.com
 
 ## Licenses
