@@ -1,5 +1,5 @@
 project = "rTea"
-author = "Junseok Park"
+author = "Boram Lee and Junseok Park"
 copyright = "2024, rTea"
 release = "1.0.0"
 
