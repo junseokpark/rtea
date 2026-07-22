@@ -12,7 +12,7 @@ This page walks you through a complete demo run of ``rTea`` on a small test samp
 
 ```bash
 export RTEA_BILLING_PROJECT="your-google-cloud-project-id"
-export RTEA_DEMO_BUCKET="gs://<RTEA_DEMO_BUCKET>"   # replace with actual bucket name
+export RTEA_DEMO_BUCKET="gs://rtea-public-data/rtea-results/demo"   # replace with actual bucket name
 
 bash scripts/download_demo_data.sh \
     --billing-project "$RTEA_BILLING_PROJECT" \
