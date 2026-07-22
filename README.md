@@ -46,7 +46,7 @@ See **[rtea_results/demo/README.md](rtea_results/demo/README.md)** for the full 
 1. **Download the demo input data** using GCS with your billing project:
    ```bash
    export RTEA_BILLING_PROJECT="your-google-cloud-project-id"
-   export RTEA_DEMO_BUCKET="gs://<RTEA_DEMO_BUCKET>"   # replace with actual bucket name
+   export RTEA_DEMO_BUCKET="gs://rtea-public-data/rtea-results/demo"   # replace with actual bucket name
 
    bash scripts/download_demo_data.sh \
        --billing-project "$RTEA_BILLING_PROJECT" \
