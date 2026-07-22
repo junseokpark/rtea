@@ -10,6 +10,7 @@
 ![rTea](images/ToolImage.png "``rTea``")
 
 * Citation:&nbsp;[Pan-cancer analysis reveals multifaceted roles of retrotransposon-fusion RNAs](https://www.biorxiv.org/content/10.1101/2023.10.16.562422v1.abstract)
+* Manual:&nbsp;https://rtea.readthedocs.io/
 
 ---
 
