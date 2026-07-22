@@ -1,6 +1,6 @@
 project = "rTea"
 author = "Junseok Park"
-copyright = "2024, Junseok Park"
+copyright = "2024, rTea"
 release = "1.0.0"
 
 extensions = [
